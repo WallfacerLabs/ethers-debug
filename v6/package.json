@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@ethers-ext/provider-ganache": "^6.0.0-beta.1",
     "chai": "^4.3.7",
     "ethers": "^6.6.7",
-    "ganache": "^7.9.0",
     "mocha": "^10.2.0"
   },
   "scripts": {

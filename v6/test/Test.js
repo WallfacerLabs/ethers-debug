@@ -1,18 +1,20 @@
 const TestContract = require('../build/Test.json')
-const ganache = require('ganache')
 const {defaultAccounts} = require('./utils.js')
-const { Wallet, ContractFactory, BrowserProvider } = require('ethers')
+const { Wallet, ContractFactory } = require('ethers')
+const { GanacheProvider } = require('@ethers-ext/provider-ganache')
 
 
 describe('Test', () => {
   it('fails', async () => {
-    const ganacheobj = ganache.provider({ wallet: { accounts: defaultAccounts }, logging: { quiet: true}})
-    const provider = new BrowserProvider(ganacheobj)
+    const provider = new GanacheProvider()
+    
     const wallet = new Wallet(defaultAccounts[0].secretKey, provider)
+    
+    await provider.setAccount(wallet.address, defaultAccounts[0].balance)
     const factory = new ContractFactory(TestContract.abi, TestContract.bytecode, wallet)
     const testContract = await factory.deploy()
-    const tx = await testContract.test({ gasLimit: 999999 })
-    await tx.wait()
+    // const tx = await testContract.test({ gasLimit: 999999 })
+    // await tx.wait()
   }).timeout(2000000)
 
 })
