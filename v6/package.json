@@ -8,5 +8,8 @@
     "ethers": "^6.6.7",
     "ganache": "^7.9.0",
     "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

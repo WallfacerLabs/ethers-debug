@@ -1,13 +1,13 @@
 pragma solidity ^0.8.15;
 
 contract Test {
-  uint256 public dupa;
+  uint256 public randomVar;
   constructor() {
 
   }
   
   function test() public {
     revert('Error in Test.sol');
-    dupa = 10;
+    randomVar = 10;
   }
 }
