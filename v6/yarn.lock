@@ -29,9 +29,9 @@
     "@chainsafe/persistent-merkle-tree" "^0.6.1"
 
 "@ethers-ext/provider-ganache@^6.0.0-beta.1":
-  version "6.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@ethers-ext/provider-ganache/-/provider-ganache-6.0.0-beta.1.tgz#8b3b046674c750e389d4b63bf7831b0484ff38a8"
-  integrity sha512-ZOEVKPrynv0KHgDRgWHrri9XTnD1RuB1wILAH3xkVIc5eNsZWCzOWai6HJZEYZTDWp0GuuLVaCKwSJ6aAAls1Q==
+  version "6.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@ethers-ext/provider-ganache/-/provider-ganache-6.0.0-beta.2.tgz#11443cb762222f007417dd9729de7483a142db99"
+  integrity sha512-dO8bD6VBXN9XeNIR+k8Zy2OU+n+vK+aaV+J2rmWUNyIKOEssrgFtRhP1qDtXwjkIKjW2SVeMHmFBYjGXImu+pg==
   dependencies:
     "@chainsafe/ssz" "^0.11.1"
     ethers "^6.6.0"
