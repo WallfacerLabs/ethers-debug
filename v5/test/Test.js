@@ -12,6 +12,6 @@ describe('Test', () => {
     const provider = new MockProvider()
     const [wallet] = provider.getWallets()
     const testContract = await deployContract(wallet, TestContract, [])
-    await expect(() => testContract.test()).to.be.revertedWith('Error in Test.sol')
+    await expect(() => testContract.test({ gasLimit: 999999 })).to.be.revertedWith('Error in Test.sol')
   })
 })
